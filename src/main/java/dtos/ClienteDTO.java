@@ -45,4 +45,40 @@ public class ClienteDTO implements Serializable {
     public void setMovimientosCC(List<MovimientoCCDto> movimientosCC) {
         this.movimientosCC = movimientosCC;
     }
+
+    public Integer getDni() {
+        return dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public String getCuit() {
+        return cuit;
+    }
+
+    public String getRazonSocial() {
+        return razonSocial;
+    }
+
+    public float getLimiteCredito() {
+        return limiteCredito;
+    }
+
+    public float getMontoDisponible() {
+        return montoDisponible;
+    }
+
+    public List<MovimientoCCDto> getMovimientosCC() {
+        return movimientosCC;
+    }
 }
