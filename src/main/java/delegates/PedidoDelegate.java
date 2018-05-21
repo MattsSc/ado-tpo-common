@@ -10,7 +10,6 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
-import java.util.Date;
 import java.util.List;
 
 public class PedidoDelegate implements SistemaPedido {
@@ -38,8 +37,8 @@ public class PedidoDelegate implements SistemaPedido {
     }
 
 
-    public void crearPedido(ClienteDTO cliente, Date fechaSolicitudOrden, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException {
-        sistemaPedido.crearPedido(cliente, fechaSolicitudOrden, direccionEntrega, items);
+    public void crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException {
+        sistemaPedido.crearPedido(cliente, direccionEntrega, items);
     }
 
     public PedidoDTO obtenerPedido(Integer id) throws RemoteException {
