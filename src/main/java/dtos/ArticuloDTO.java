@@ -10,19 +10,7 @@ public class ArticuloDTO {
     private int tamanio;
     private int unidad;
     private float precio;
-    private List<LoteDTO> lotes;
-    private List<MovimientoDTO> movimientos;
 
-    public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio, List<LoteDTO> lotes, List<MovimientoDTO> movimientos) {
-        this.codigo = codigo;
-        this.descripcion = descripcion;
-        this.presentacion = presentacion;
-        this.tamanio = tamanio;
-        this.unidad = unidad;
-        this.precio = precio;
-        this.lotes = lotes;
-        this.movimientos = movimientos;
-    }
 
     public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio) {
         this.codigo = codigo;
@@ -31,8 +19,6 @@ public class ArticuloDTO {
         this.tamanio = tamanio;
         this.unidad = unidad;
         this.precio = precio;
-        this.lotes =new ArrayList<LoteDTO>();
-        this.movimientos = new ArrayList<MovimientoDTO>();
     }
 
     public Integer getCodigo() {
@@ -81,21 +67,5 @@ public class ArticuloDTO {
 
     public void setPrecio(float precio) {
         this.precio = precio;
-    }
-
-    public List<LoteDTO> getLotes() {
-        return lotes;
-    }
-
-    public void setLotes(List<LoteDTO> lotes) {
-        this.lotes = lotes;
-    }
-
-    public List<MovimientoDTO> getMovimientos() {
-        return movimientos;
-    }
-
-    public void setMovimientos(List<MovimientoDTO> movimientos) {
-        this.movimientos = movimientos;
     }
 }
