@@ -100,4 +100,7 @@ public class UbicacionDTO implements Serializable {
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
+
+    public UbicacionDTO() {
+    }
 }

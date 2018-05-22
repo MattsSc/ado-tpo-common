@@ -102,4 +102,7 @@ public class PedidoDTO implements Serializable {
     public void setItems(List<ItemPedidoDTO> items) {
         this.items = items;
     }
+
+    public PedidoDTO() {
+    }
 }

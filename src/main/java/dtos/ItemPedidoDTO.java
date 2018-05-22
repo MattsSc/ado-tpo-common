@@ -45,4 +45,7 @@ public class ItemPedidoDTO implements Serializable {
     public void setLote(LoteDTO lote) {
         this.lote = lote;
     }
+
+    public ItemPedidoDTO() {
+    }
 }

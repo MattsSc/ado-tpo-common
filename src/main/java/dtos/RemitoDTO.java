@@ -59,4 +59,7 @@ public class RemitoDTO implements Serializable {
     public void setItemsRemito(List<ItemRemitoDTO> itemsRemito) {
         this.itemsRemito = itemsRemito;
     }
+
+    public RemitoDTO() {
+    }
 }

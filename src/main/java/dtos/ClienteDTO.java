@@ -81,4 +81,7 @@ public class ClienteDTO implements Serializable {
     public List<MovimientoCCDto> getMovimientosCC() {
         return movimientosCC;
     }
+
+    public ClienteDTO() {
+    }
 }

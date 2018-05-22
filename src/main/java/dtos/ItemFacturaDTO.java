@@ -40,4 +40,7 @@ public class ItemFacturaDTO implements Serializable {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+    public ItemFacturaDTO() {
+    }
 }

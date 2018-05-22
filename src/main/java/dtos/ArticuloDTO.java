@@ -29,6 +29,9 @@ public class ArticuloDTO implements Serializable {
         this.movimientos = movimientos;
     }
 
+    public ArticuloDTO() {
+    }
+
     public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio) {
         this.codigo = codigo;
         this.descripcion = descripcion;

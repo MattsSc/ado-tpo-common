@@ -89,4 +89,7 @@ public class OrdenCompraDTO implements Serializable {
     public void setCortoOrdenDeCompra(Float cortoOrdenDeCompra) {
         this.cortoOrdenDeCompra = cortoOrdenDeCompra;
     }
+
+    public OrdenCompraDTO() {
+    }
 }

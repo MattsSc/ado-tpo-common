@@ -63,4 +63,7 @@ public class FacturaDTO implements Serializable {
     public void setItemsFactura(List<ItemFacturaDTO> itemsFactura) {
         this.itemsFactura = itemsFactura;
     }
+
+    public FacturaDTO() {
+    }
 }

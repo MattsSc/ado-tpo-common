@@ -57,4 +57,7 @@ public class LoteDTO implements Serializable {
     public void setProovedor(ProveedorDTO proovedor) {
         this.proovedor = proovedor;
     }
+
+    public LoteDTO() {
+    }
 }

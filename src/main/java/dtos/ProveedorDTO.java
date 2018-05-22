@@ -39,4 +39,7 @@ public class ProveedorDTO implements Serializable {
     public void setCuit(int cuit) {
         this.cuit = cuit;
     }
+
+    public ProveedorDTO() {
+    }
 }
