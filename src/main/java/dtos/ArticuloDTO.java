@@ -40,7 +40,7 @@ public class ArticuloDTO implements Serializable {
         this.unidad = unidad;
         this.precio = precio;
         this.lotes = new ArrayList<LoteDTO>();
-        this.movimientos = new ArrayList<MovimientoDto>();
+        this.movimientos = new ArrayList<MovimientoDTO>();
     }
 
     public static long getSerialVersionUID() {
@@ -103,11 +103,11 @@ public class ArticuloDTO implements Serializable {
         this.lotes = lotes;
     }
 
-    public List<MovimientoDto> getMovimientos() {
+    public List<MovimientoDTO> getMovimientos() {
         return movimientos;
     }
 
-    public void setMovimientos(List<MovimientoDto> movimientos) {
+    public void setMovimientos(List<MovimientoDTO> movimientos) {
         this.movimientos = movimientos;
     }
 }
