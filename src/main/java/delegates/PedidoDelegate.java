@@ -3,13 +3,13 @@ package delegates;
 import dtos.ClienteDTO;
 import dtos.ItemPedidoDTO;
 import dtos.PedidoDTO;
-import interfaces.SistemaCliente;
 import interfaces.SistemaPedido;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.Date;
 import java.util.List;
 
 public class PedidoDelegate implements SistemaPedido {
@@ -49,12 +49,16 @@ public class PedidoDelegate implements SistemaPedido {
         sistemaPedido.aprobarPedido(id);
     }
 
+    public void despacharPedido(Integer id, String tipoFactura) throws RemoteException {
+        sistemaPedido.despacharPedido(id,tipoFactura);
+    }
+
     public void rechazarPedido(Integer id) throws RemoteException {
         sistemaPedido.rechazarPedido(id);
     }
 
-    public void actualizarPedido(PedidoDTO pedidoDTO) throws RemoteException {
-        sistemaPedido.actualizarPedido(pedidoDTO);
+    public void completarPedido(Integer id, Date fechaEntrega) throws RemoteException {
+        sistemaPedido.completarPedido(id, fechaEntrega);
     }
 
     public List<PedidoDTO> listarPedidos() throws RemoteException {
