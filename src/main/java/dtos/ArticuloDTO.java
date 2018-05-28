@@ -1,8 +1,5 @@
 package dtos;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ArticuloDTO {
     private Integer codigo;
     private String descripcion;
@@ -10,15 +7,17 @@ public class ArticuloDTO {
     private int tamanio;
     private int unidad;
     private float precio;
+    private Integer cantReposicion;
 
 
-    public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio) {
+    public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio, Integer cantReposicion) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.presentacion = presentacion;
         this.tamanio = tamanio;
         this.unidad = unidad;
         this.precio = precio;
+        this.cantReposicion = cantReposicion;
     }
 
     public Integer getCodigo() {
@@ -67,5 +66,13 @@ public class ArticuloDTO {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+
+    public Integer getCantReposicion() {
+        return cantReposicion;
+    }
+
+    public void setCantReposicion(Integer cantReposicion) {
+        this.cantReposicion = cantReposicion;
     }
 }
