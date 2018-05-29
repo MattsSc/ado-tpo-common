@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface SistemaCliente extends Remote {
 
-    void crearCliente(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible)  throws RemoteException;
+    void crearCliente(ClienteDTO cliente)  throws RemoteException;
     void modificarCliente(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible)  throws RemoteException;
     void borrarCliente(Integer dni) throws RemoteException;
     void agregarMovimiento(Integer dni,MovimientoCCDto movimientoCCDto) throws RemoteException;

@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 public interface SistemaPedido extends Remote {
-    void crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException;
+    Integer crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException;
     PedidoDTO obtenerPedido(Integer id) throws RemoteException;
     void aprobarPedido(Integer id) throws RemoteException;
     void despacharPedido(Integer id, String tipoFactura) throws RemoteException;

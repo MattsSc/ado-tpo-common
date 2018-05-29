@@ -37,8 +37,8 @@ public class PedidoDelegate implements SistemaPedido {
     }
 
 
-    public void crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException {
-        sistemaPedido.crearPedido(cliente, direccionEntrega, items);
+    public Integer crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException {
+        return  sistemaPedido.crearPedido(cliente, direccionEntrega, items);
     }
 
     public PedidoDTO obtenerPedido(Integer id) throws RemoteException {

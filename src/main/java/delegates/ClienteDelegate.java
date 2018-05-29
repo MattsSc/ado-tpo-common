@@ -23,8 +23,8 @@ public class ClienteDelegate implements SistemaCliente {
         return INSTANCE;
     }
 
-    public  void crearCliente(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible)  throws RemoteException{
-        sistemaCliente.crearCliente(dni,nombre,apellido,domicilio,cuit,razonSocial,limiteCredito,montoDisponible);
+    public  void crearCliente(ClienteDTO cliente)  throws RemoteException{
+        sistemaCliente.crearCliente(cliente);
     }
 
     public void modificarCliente(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible)  throws RemoteException{

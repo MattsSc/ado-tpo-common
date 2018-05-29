@@ -1,6 +1,9 @@
 package dtos;
 
-public class ArticuloDTO {
+import java.io.Serializable;
+
+public class ArticuloDTO implements Serializable {
+    private static final long serialVersionUID = 6441169009474107346L;
     private Integer codigo;
     private String descripcion;
     private String presentacion;
@@ -8,6 +11,8 @@ public class ArticuloDTO {
     private int unidad;
     private float precio;
     private Integer cantReposicion;
+
+
 
 
     public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio, Integer cantReposicion) {
