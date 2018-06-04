@@ -66,7 +66,7 @@ public class PedidoDelegate implements SistemaPedido {
     }
 
     public List<PedidoDTO> listarPedidos(String estado) throws RemoteException {
-        return listarPedidos(estado);
+        return sistemaPedido.listarPedidos(estado);
     }
 
 
