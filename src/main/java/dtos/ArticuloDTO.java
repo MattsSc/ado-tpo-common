@@ -12,8 +12,10 @@ public class ArticuloDTO implements Serializable {
     private float precio;
     private Integer cantReposicion;
 
-
-
+    @Override
+    public String toString() {
+        return this.getCodigo() +" - "+ this.getDescripcion();
+    }
 
     public ArticuloDTO(Integer codigo, String descripcion, String presentacion, int tamanio, int unidad, float precio, Integer cantReposicion) {
         this.codigo = codigo;

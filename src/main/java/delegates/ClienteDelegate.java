@@ -47,6 +47,10 @@ public class ClienteDelegate implements SistemaCliente {
         return sistemaCliente.obtenerCliente(dni);
     }
 
+    public List<MovimientoCCDto> obtenerMovDeCliente(Integer dni) throws RemoteException {
+        return sistemaCliente.obtenerMovDeCliente(dni);
+    }
+
     private void Conectar(){
         try{
             sistemaCliente = (SistemaCliente) Naming.lookup("//localhost:1099/ControladorCliente");

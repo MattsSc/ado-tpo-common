@@ -1,6 +1,7 @@
 package delegates;
 
 import dtos.ClienteDTO;
+import dtos.ItemAProcesarDTO;
 import dtos.ItemPedidoDTO;
 import dtos.PedidoDTO;
 import interfaces.SistemaPedido;
@@ -49,8 +50,8 @@ public class PedidoDelegate implements SistemaPedido {
         sistemaPedido.aprobarPedido(id);
     }
 
-    public void despacharPedido(Integer id, String tipoFactura) throws RemoteException {
-        sistemaPedido.despacharPedido(id,tipoFactura);
+    public List<ItemAProcesarDTO> despacharPedido(Integer id, String tipoFactura) throws RemoteException {
+        return sistemaPedido.despacharPedido(id,tipoFactura);
     }
 
     public void rechazarPedido(Integer id) throws RemoteException {

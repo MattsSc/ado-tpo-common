@@ -1,9 +1,17 @@
 package dtos;
 
-public class ProveedorDTO {
+import java.io.Serializable;
+
+public class ProveedorDTO implements Serializable {
+    private static final long serialVersionUID = -7319002751549274804L;
     private Integer id;
     private String nombre;
     private int cuit;
+
+    @Override
+    public String toString() {
+        return this.getId() + " - " + this.getNombre();
+    }
 
     public ProveedorDTO(Integer id, String nombre, int cuit) {
         this.id = id;

@@ -12,6 +12,11 @@ public class OrdenDeCompraDTO implements Serializable {
     private boolean resuelto;
     private ProveedorDTO proovedor;
 
+    public OrdenDeCompraDTO(ArticuloDTO articulo, ProveedorDTO proovedor) {
+        this.articulo = articulo;
+        this.proovedor = proovedor;
+    }
+
     public OrdenDeCompraDTO(Integer id, ArticuloDTO articulo, Integer cantidad, boolean resuelto, ProveedorDTO proovedor) {
         this.id = id;
         this.articulo = articulo;

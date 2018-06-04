@@ -15,5 +15,6 @@ public interface SistemaCliente extends Remote {
     void agregarMovimiento(Integer dni,MovimientoCCDto movimientoCCDto) throws RemoteException;
     List<ClienteDTO> listarClientes() throws RemoteException;
     ClienteDTO obtenerCliente(Integer dni) throws RemoteException;
+    List<MovimientoCCDto> obtenerMovDeCliente(Integer dni) throws RemoteException;
 
 }

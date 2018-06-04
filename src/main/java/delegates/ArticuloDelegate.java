@@ -27,6 +27,10 @@ public class ArticuloDelegate implements SistemaArticulo {
         return sistemaArticulo.obtenerArticulo(id);
     }
 
+    public List<ArticuloDTO> obtenerArticulosFaltantes() throws RemoteException {
+        return sistemaArticulo.obtenerArticulosFaltantes();
+    }
+
     public List<ArticuloDTO> obtenerArticulos() throws RemoteException {
         return sistemaArticulo.obtenerArticulos();
     }

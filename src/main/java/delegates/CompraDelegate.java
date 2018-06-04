@@ -1,6 +1,7 @@
 package delegates;
 
 import dtos.OrdenDeCompraDTO;
+import dtos.ProveedorDTO;
 import interfaces.SistemaCompra;
 
 import java.net.MalformedURLException;
@@ -8,6 +9,7 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.Date;
+import java.util.List;
 
 public class CompraDelegate implements SistemaCompra {
     private static CompraDelegate ourInstance = new CompraDelegate();
@@ -31,6 +33,10 @@ public class CompraDelegate implements SistemaCompra {
         } catch (NotBoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<ProveedorDTO> obtenerUltimos3Proveedores(Integer idProducto) throws RemoteException {
+        return sistemaCompra.obtenerUltimos3Proveedores(idProducto);
     }
 
     public Integer crearOrdenDeCompra(OrdenDeCompraDTO ordenDeCompraDTO) throws RemoteException {
