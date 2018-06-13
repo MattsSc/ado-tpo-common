@@ -51,6 +51,10 @@ public class ClienteDelegate implements SistemaCliente {
         return sistemaCliente.obtenerMovDeCliente(dni);
     }
 
+    public void registrarPago(Integer dni, float cantidad) throws RemoteException {
+        sistemaCliente.registrarPago(dni, cantidad);
+    }
+
     private void Conectar(){
         try{
             sistemaCliente = (SistemaCliente) Naming.lookup("//localhost:1099/ControladorCliente");

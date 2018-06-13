@@ -23,6 +23,10 @@ public class ArticuloDelegate implements SistemaArticulo {
         return INSTANCE;
     }
 
+    public void crearArticulo(ArticuloDTO articuloDTO) throws RemoteException {
+        sistemaArticulo.crearArticulo(articuloDTO);
+    }
+
     public ArticuloDTO obtenerArticulo(Integer id) throws RemoteException {
         return sistemaArticulo.obtenerArticulo(id);
     }
