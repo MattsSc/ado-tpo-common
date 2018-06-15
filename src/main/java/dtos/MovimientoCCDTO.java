@@ -3,7 +3,7 @@ package dtos;
 import java.io.Serializable;
 import java.util.Date;
 
-public class MovimientoCCDto implements Serializable{
+public class MovimientoCCDTO implements Serializable{
 
     private static final long serialVersionUID = 2677561337143819018L;
     private int idMovimiento;
@@ -11,7 +11,7 @@ public class MovimientoCCDto implements Serializable{
     private float importe;
     private String tipo;
 
-    public MovimientoCCDto(int idMovimiento, Date fecha, float importe, String tipo) {
+    public MovimientoCCDTO(int idMovimiento, Date fecha, float importe, String tipo) {
         this.idMovimiento = idMovimiento;
         this.fecha = fecha;
         this.importe = importe;

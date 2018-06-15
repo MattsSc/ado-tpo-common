@@ -46,16 +46,16 @@ public class PedidoDelegate implements SistemaPedido {
         return sistemaPedido.obtenerPedido(id);
     }
 
-    public void aprobarPedido(Integer id) throws RemoteException {
-        sistemaPedido.aprobarPedido(id);
+    public void aprobarPedido(Integer id, String aclaracion) throws RemoteException {
+        sistemaPedido.aprobarPedido(id, aclaracion);
     }
 
     public List<ItemAProcesarDTO> despacharPedido(Integer id, String tipoFactura) throws RemoteException {
         return sistemaPedido.despacharPedido(id,tipoFactura);
     }
 
-    public void rechazarPedido(Integer id) throws RemoteException {
-        sistemaPedido.rechazarPedido(id);
+    public void rechazarPedido(Integer id, String aclaracion) throws RemoteException {
+        sistemaPedido.rechazarPedido(id, aclaracion);
     }
 
     public void completarPedido(Integer id, Date fechaEntrega) throws RemoteException {

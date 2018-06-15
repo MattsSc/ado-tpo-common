@@ -1,7 +1,7 @@
 package delegates;
 
 import dtos.ClienteDTO;
-import dtos.MovimientoCCDto;
+import dtos.MovimientoCCDTO;
 import interfaces.SistemaCliente;
 
 import java.net.MalformedURLException;
@@ -35,8 +35,8 @@ public class ClienteDelegate implements SistemaCliente {
         sistemaCliente.borrarCliente(dni);
     }
 
-    public void agregarMovimiento(Integer dni, MovimientoCCDto movimientoCCDto)  throws RemoteException{
-        sistemaCliente.agregarMovimiento(dni,movimientoCCDto);
+    public void agregarMovimiento(Integer dni, MovimientoCCDTO movimientoCCDTO)  throws RemoteException{
+        sistemaCliente.agregarMovimiento(dni, movimientoCCDTO);
     }
 
     public List<ClienteDTO> listarClientes() throws RemoteException {
@@ -47,7 +47,7 @@ public class ClienteDelegate implements SistemaCliente {
         return sistemaCliente.obtenerCliente(dni);
     }
 
-    public List<MovimientoCCDto> obtenerMovDeCliente(Integer dni) throws RemoteException {
+    public List<MovimientoCCDTO> obtenerMovDeCliente(Integer dni) throws RemoteException {
         return sistemaCliente.obtenerMovDeCliente(dni);
     }
 

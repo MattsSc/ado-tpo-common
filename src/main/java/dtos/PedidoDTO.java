@@ -15,9 +15,10 @@ public class PedidoDTO implements Serializable {
     private Date fechaEntrega;
     private String estado;
     private String direccionEntrega;
+    private String aclaracion;
     private List<ItemPedidoDTO> items;
 
-    public PedidoDTO(Integer id, ClienteDTO cliente, Date fechaSolicitudOrden, Date fechaDespacho, Date fechaEntrega, String estado, String direccionEntrega, List<ItemPedidoDTO> items) {
+    public PedidoDTO(Integer id, ClienteDTO cliente, Date fechaSolicitudOrden, Date fechaDespacho, Date fechaEntrega, String estado, String direccionEntrega, String aclaracion, List<ItemPedidoDTO> items) {
         this.id = id;
         this.cliente = cliente;
         this.fechaSolicitudOrden = fechaSolicitudOrden;
@@ -25,6 +26,7 @@ public class PedidoDTO implements Serializable {
         this.fechaEntrega = fechaEntrega;
         this.estado = estado;
         this.direccionEntrega = direccionEntrega;
+        this.aclaracion = aclaracion;
         this.items = items;
     }
 
@@ -93,6 +95,14 @@ public class PedidoDTO implements Serializable {
 
     public void setDireccionEntrega(String direccionEntrega) {
         this.direccionEntrega = direccionEntrega;
+    }
+
+    public String getAclaracion() {
+        return aclaracion;
+    }
+
+    public void setAclaracion(String aclaracion) {
+        this.aclaracion = aclaracion;
     }
 
     public List<ItemPedidoDTO> getItems() {

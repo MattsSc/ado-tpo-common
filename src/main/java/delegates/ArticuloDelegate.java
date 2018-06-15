@@ -1,6 +1,7 @@
 package delegates;
 
 import dtos.ArticuloDTO;
+import dtos.MovimientoPorEliminacionDTO;
 import interfaces.SistemaArticulo;
 import interfaces.SistemaCliente;
 
@@ -37,6 +38,11 @@ public class ArticuloDelegate implements SistemaArticulo {
 
     public List<ArticuloDTO> obtenerArticulos() throws RemoteException {
         return sistemaArticulo.obtenerArticulos();
+    }
+
+    @Override
+    public void generarMovimientoPorRotura(Integer loteId, MovimientoPorEliminacionDTO movimientoPorEliminacionDTO) throws RemoteException {
+        sistemaArticulo.generarMovimientoPorRotura(loteId,movimientoPorEliminacionDTO);
     }
 
     private void Conectar(){

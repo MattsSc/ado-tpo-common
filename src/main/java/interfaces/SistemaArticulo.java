@@ -1,6 +1,7 @@
 package interfaces;
 
 import dtos.ArticuloDTO;
+import dtos.MovimientoPorEliminacionDTO;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -11,4 +12,5 @@ public interface SistemaArticulo extends Remote {
     ArticuloDTO obtenerArticulo(Integer id) throws RemoteException;
     List<ArticuloDTO> obtenerArticulos() throws RemoteException;
     List<ArticuloDTO> obtenerArticulosFaltantes() throws RemoteException;
+    void generarMovimientoPorRotura(Integer loteId, MovimientoPorEliminacionDTO movimientoPorEliminacionDTO) throws RemoteException;
 }

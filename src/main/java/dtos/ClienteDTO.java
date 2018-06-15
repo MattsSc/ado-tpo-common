@@ -16,9 +16,9 @@ public class ClienteDTO implements Serializable {
     private String razonSocial;
     private float limiteCredito;
     private float montoDisponible;
-    private List<MovimientoCCDto> movimientosCC;
+    private List<MovimientoCCDTO> movimientosCC;
 
-    public ClienteDTO(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible, List<MovimientoCCDto> movimientosCC) {
+    public ClienteDTO(Integer dni, String nombre, String apellido, String domicilio, String cuit, String razonSocial, float limiteCredito, float montoDisponible, List<MovimientoCCDTO> movimientosCC) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -39,10 +39,10 @@ public class ClienteDTO implements Serializable {
         this.razonSocial = razonSocial;
         this.limiteCredito = limiteCredito;
         this.montoDisponible = montoDisponible;
-        this.movimientosCC = new ArrayList<MovimientoCCDto>();
+        this.movimientosCC = new ArrayList<MovimientoCCDTO>();
     }
 
-    public void setMovimientosCC(List<MovimientoCCDto> movimientosCC) {
+    public void setMovimientosCC(List<MovimientoCCDTO> movimientosCC) {
         this.movimientosCC = movimientosCC;
     }
 
@@ -78,7 +78,7 @@ public class ClienteDTO implements Serializable {
         return montoDisponible;
     }
 
-    public List<MovimientoCCDto> getMovimientosCC() {
+    public List<MovimientoCCDTO> getMovimientosCC() {
         return movimientosCC;
     }
 }
