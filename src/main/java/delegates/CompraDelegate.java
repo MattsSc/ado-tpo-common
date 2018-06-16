@@ -43,7 +43,7 @@ public class CompraDelegate implements SistemaCompra {
         return sistemaCompra.crearOrdenDeCompra(ordenDeCompraDTO);
     }
 
-    public void cerrarOrdenDeCompra(Integer ocId, Date fechaVencimiento) throws RemoteException {
-        sistemaCompra.cerrarOrdenDeCompra(ocId, fechaVencimiento);
+    public void cerrarOrdenDeCompra(Integer ocId, float precioTotal, Date fechaVencimiento) throws RemoteException {
+        sistemaCompra.cerrarOrdenDeCompra(ocId,precioTotal, fechaVencimiento);
     }
 }
