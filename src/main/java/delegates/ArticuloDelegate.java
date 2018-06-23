@@ -1,9 +1,9 @@
 package delegates;
 
 import dtos.ArticuloDTO;
+import dtos.MovimientoPorAjusteDTO;
 import dtos.MovimientoPorEliminacionDTO;
 import interfaces.SistemaArticulo;
-import interfaces.SistemaCliente;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -43,6 +43,16 @@ public class ArticuloDelegate implements SistemaArticulo {
     @Override
     public void generarMovimientoPorRotura(Integer loteId, MovimientoPorEliminacionDTO movimientoPorEliminacionDTO) throws RemoteException {
         sistemaArticulo.generarMovimientoPorRotura(loteId,movimientoPorEliminacionDTO);
+    }
+
+    @Override
+    public void generarMovimientoPorAjustePositivo(Integer loteId, MovimientoPorAjusteDTO movimientoPorAjusteDTO) throws RemoteException {
+        sistemaArticulo.generarMovimientoPorAjustePositivo(loteId, movimientoPorAjusteDTO);
+    }
+
+    @Override
+    public void generarMovimientoPorAjusteNegativo(Integer loteId, MovimientoPorAjusteDTO movimientoPorAjusteDTO) throws RemoteException {
+        sistemaArticulo.generarMovimientoPorAjusteNegativo(loteId, movimientoPorAjusteDTO);
     }
 
     private void Conectar(){

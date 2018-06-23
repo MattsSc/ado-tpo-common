@@ -2,6 +2,7 @@ package delegates;
 
 import dtos.OrdenDeCompraDTO;
 import dtos.ProveedorDTO;
+import dtos.ProveedorPrecioDTO;
 import interfaces.SistemaCompra;
 
 import java.net.MalformedURLException;
@@ -35,8 +36,13 @@ public class CompraDelegate implements SistemaCompra {
         }
     }
 
-    public List<ProveedorDTO> obtenerUltimos3Proveedores(Integer idProducto) throws RemoteException {
+    public List<ProveedorPrecioDTO> obtenerUltimos3Proveedores(Integer idProducto) throws RemoteException {
         return sistemaCompra.obtenerUltimos3Proveedores(idProducto);
+    }
+
+    @Override
+    public void asignarOrdenesDePedidoAOrdenesAbiertas() throws RemoteException {
+        sistemaCompra.asignarOrdenesDePedidoAOrdenesAbiertas();
     }
 
     public Integer crearOrdenDeCompra(OrdenDeCompraDTO ordenDeCompraDTO) throws RemoteException {
@@ -45,5 +51,10 @@ public class CompraDelegate implements SistemaCompra {
 
     public void cerrarOrdenDeCompra(Integer ocId, float precioTotal, Date fechaVencimiento) throws RemoteException {
         sistemaCompra.cerrarOrdenDeCompra(ocId,precioTotal, fechaVencimiento);
+    }
+
+    @Override
+    public List<ProveedorDTO> obtenerProveedores() throws RemoteException {
+        return sistemaCompra.obtenerProveedores();
     }
 }

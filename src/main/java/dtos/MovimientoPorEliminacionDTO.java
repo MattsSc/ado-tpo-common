@@ -11,11 +11,12 @@ public class MovimientoPorEliminacionDTO implements Serializable {
     private Date fecha;
     private String tipo;
     private Integer cantidad;
+    private String ubicacion;
     private String encargado;
     private String destino;
     private String autorizador;
 
-    public MovimientoPorEliminacionDTO(Integer id, Date fecha, String tipo, Integer cantidad, String encargado, String destino, String autorizador) {
+    public MovimientoPorEliminacionDTO(Integer id, Date fecha, String tipo, Integer cantidad, String encargado, String destino, String autorizador, String ubicacion) {
         this.id = id;
         this.fecha = fecha;
         this.tipo = tipo;
@@ -23,15 +24,17 @@ public class MovimientoPorEliminacionDTO implements Serializable {
         this.encargado = encargado;
         this.destino = destino;
         this.autorizador = autorizador;
+        this.ubicacion = ubicacion;
     }
 
-    public MovimientoPorEliminacionDTO(Date fecha, String tipo, Integer cantidad, String encargado, String destino, String autorizador) {
+    public MovimientoPorEliminacionDTO(Date fecha, String tipo, Integer cantidad, String encargado, String destino, String autorizador, String ubicacion) {
         this.fecha = fecha;
         this.tipo = tipo;
         this.cantidad = cantidad;
         this.encargado = encargado;
         this.destino = destino;
         this.autorizador = autorizador;
+        this.ubicacion = ubicacion;
     }
 
     public Integer getId() {
@@ -88,5 +91,13 @@ public class MovimientoPorEliminacionDTO implements Serializable {
 
     public void setAutorizador(String autorizador) {
         this.autorizador = autorizador;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 }
