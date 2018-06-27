@@ -57,7 +57,7 @@ public class ClienteDelegate implements SistemaCliente {
 
     private void Conectar(){
         try{
-            sistemaCliente = (SistemaCliente) Naming.lookup("//localhost:1099/ControladorCliente");
+            sistemaCliente = (SistemaCliente) Naming.lookup("//127.0.0.1:1099/ControladorCliente");
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
