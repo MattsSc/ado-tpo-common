@@ -40,6 +40,11 @@ public class PedidoDelegate implements SistemaPedido {
         return  sistemaPedido.crearPedido(pedidoDTO);
     }
 
+    @Override
+    public List<PedidoDTO> obtenerPedidosPorCliente(Integer idCliente) throws RemoteException {
+        return sistemaPedido.obtenerPedidosPorCliente(idCliente);
+    }
+
     public PedidoDTO obtenerPedido(Integer id) throws RemoteException {
         return sistemaPedido.obtenerPedido(id);
     }

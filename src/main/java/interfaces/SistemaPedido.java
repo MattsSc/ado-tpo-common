@@ -11,6 +11,7 @@ import java.util.List;
 public interface SistemaPedido extends Remote {
     Integer crearPedido(PedidoDTO pedidoDTO) throws RemoteException;
     PedidoDTO obtenerPedido(Integer id) throws RemoteException;
+    List<PedidoDTO> obtenerPedidosPorCliente(Integer idCliente) throws RemoteException;
     void aprobarPedido(Integer id, String aclaracion) throws RemoteException;
     List<ItemAProcesarDTO> despacharPedido(Integer id, String tipoFactura) throws RemoteException;
     void rechazarPedido(Integer id, String aclaracion) throws RemoteException;
