@@ -1,8 +1,6 @@
 package delegates;
 
-import dtos.ClienteDTO;
 import dtos.ItemAProcesarDTO;
-import dtos.ItemPedidoDTO;
 import dtos.PedidoDTO;
 import interfaces.SistemaPedido;
 
@@ -38,8 +36,8 @@ public class PedidoDelegate implements SistemaPedido {
     }
 
 
-    public Integer crearPedido(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) throws RemoteException {
-        return  sistemaPedido.crearPedido(cliente, direccionEntrega, items);
+    public Integer crearPedido(PedidoDTO pedidoDTO) throws RemoteException {
+        return  sistemaPedido.crearPedido(pedidoDTO);
     }
 
     public PedidoDTO obtenerPedido(Integer id) throws RemoteException {

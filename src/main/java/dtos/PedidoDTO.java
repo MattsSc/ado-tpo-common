@@ -1,7 +1,6 @@
 package dtos;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,15 +29,10 @@ public class PedidoDTO implements Serializable {
         this.items = items;
     }
 
-    public PedidoDTO(Integer id, ClienteDTO cliente, Date fechaSolicitudOrden, Date fechaDespacho, Date fechaEntrega, String estado, String direccionEntrega) {
-        this.id = id;
+    public PedidoDTO(ClienteDTO cliente, String direccionEntrega, List<ItemPedidoDTO> items) {
         this.cliente = cliente;
-        this.fechaSolicitudOrden = fechaSolicitudOrden;
-        this.fechaDespacho = fechaDespacho;
-        this.fechaEntrega = fechaEntrega;
-        this.estado = estado;
         this.direccionEntrega = direccionEntrega;
-        this.items = new ArrayList<ItemPedidoDTO>();
+        this.items = items;
     }
 
     public Integer getId() {
