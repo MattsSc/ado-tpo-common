@@ -1,6 +1,7 @@
 package interfaces;
 
 import dtos.ItemAProcesarDTO;
+import dtos.OrdenDePedidoDTO;
 import dtos.PedidoDTO;
 
 import java.rmi.Remote;
@@ -18,4 +19,5 @@ public interface SistemaPedido extends Remote {
     void completarPedido(Integer id, Date fechaEntrega) throws RemoteException;
     List<PedidoDTO> listarPedidos() throws RemoteException;
     List<PedidoDTO> listarPedidos(String estado) throws RemoteException;
+    List<OrdenDePedidoDTO> listarOrdenesDePedido() throws RemoteException;
 }

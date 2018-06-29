@@ -1,6 +1,7 @@
 package delegates;
 
 import dtos.ItemAProcesarDTO;
+import dtos.OrdenDePedidoDTO;
 import dtos.PedidoDTO;
 import interfaces.SistemaPedido;
 
@@ -73,5 +74,8 @@ public class PedidoDelegate implements SistemaPedido {
         return sistemaPedido.listarPedidos(estado);
     }
 
-
+    @Override
+    public List<OrdenDePedidoDTO> listarOrdenesDePedido() throws RemoteException {
+        return sistemaPedido.listarOrdenesDePedido();
+    }
 }

@@ -13,6 +13,7 @@ public interface SistemaCompra extends Remote {
     Integer crearOrdenDeCompra(OrdenDeCompraDTO ordenDeCompraDTO) throws RemoteException;
     void cerrarOrdenDeCompra(Integer ocId, float precioTotal, Date fechaVencimiento) throws RemoteException;
     void asignarOrdenesDePedidoAOrdenesAbiertas() throws RemoteException;
+    List<OrdenDeCompraDTO> obtenerTodasLasOrdenes() throws RemoteException;
     List<ProveedorPrecioDTO> obtenerUltimos3Proveedores(Integer idProducto) throws RemoteException;
     List<ProveedorDTO> obtenerProveedores() throws RemoteException;
 }
