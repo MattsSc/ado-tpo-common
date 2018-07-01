@@ -41,6 +41,11 @@ public class CompraDelegate implements SistemaCompra {
         return sistemaCompra.obtenerTodasLasOrdenes();
     }
 
+    @Override
+    public OrdenDeCompraDTO obtenerOc(Integer id) throws RemoteException {
+        return sistemaCompra.obtenerOc(id);
+    }
+
     public List<ProveedorPrecioDTO> obtenerUltimos3Proveedores(Integer idProducto) throws RemoteException {
         return sistemaCompra.obtenerUltimos3Proveedores(idProducto);
     }
