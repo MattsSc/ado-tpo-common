@@ -3,6 +3,7 @@ package delegates;
 import dtos.ArticuloDTO;
 import dtos.MovimientoPorAjusteDTO;
 import dtos.MovimientoPorEliminacionDTO;
+import dtos.UbicacionDTO;
 import interfaces.SistemaArticulo;
 
 import java.net.MalformedURLException;
@@ -38,6 +39,11 @@ public class ArticuloDelegate implements SistemaArticulo {
 
     public List<ArticuloDTO> obtenerArticulos() throws RemoteException {
         return sistemaArticulo.obtenerArticulos();
+    }
+
+    @Override
+    public List<UbicacionDTO> obtenerUbicaciones(Integer id) throws RemoteException {
+        return sistemaArticulo.obtenerUbicaciones(id);
     }
 
     @Override
